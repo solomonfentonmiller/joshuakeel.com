@@ -9,18 +9,3 @@ title: Solomon Fenton-Miller
 <p class="text-2xl">
     Hi, my name is Solomon. I'm a PhD student in educational policy at the University of Iowa. I focus on student success in higher education, particularly in online classes.
 </p>
-
-{% include 'email-signup.html' %}
-
-<p class="pb-2 mt-16 font-medium text-gray-700 border-b border-vivid-blue-600">My Latest Work</p>
-<ul class="mt-6">
-{%- for post in collections.mostRecentPosts -%}
-    <li class="flex flex-col mt-8">
-        <span class="text-base text-gray-700">{{ post.date | readableDate }}</span>
-        <h3>
-            <a class="font-medium border-b-2 font-serif-title border-vivid-blue-600" href="{{ post.url }}">{{ post.data.title }}</a>
-        </h3>
-    </li>
-{%- endfor -%}
-</ul>
-<p class="mt-8"><a class="border-none" href="/writing">See everything ⇢</a></p>
