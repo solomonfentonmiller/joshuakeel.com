@@ -1,7 +1,7 @@
 {
-  "name": "joshuakeel.com",
+  "name": "solomonfentonmiller.com",
   "version": "1.0.0",
-  "description": "Personal website of Joshua Keel.",
+  "description": "Personal website of Solomon Fenton-Miller.",
   "main": "index.js",
   "dependencies": {
     "markdown-it-footnote": "^3.0.2",
