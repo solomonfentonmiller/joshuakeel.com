@@ -19,15 +19,6 @@ module.exports = function(eleventyConfig) {
         return DateTime.fromJSDate(new Date(date), { zone: 'utc' }).toLocaleString(DateTime.DATE_FULL);
     });
 
-    eleventyConfig.addCollection('mostRecentPosts', collection => {
-        return collection.getFilteredByGlob('posts/*.md')
-            .reverse()
-            .slice(0, 3);
-    });
-
-    eleventyConfig.addCollection('allPosts', collection => {
-        return collection.getFilteredByGlob('posts/*.md')
-    });
 
     eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
         if(outputPath.endsWith('.html')) {
@@ -44,7 +35,6 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addPassthroughCopy('assets');
-    eleventyConfig.addPassthroughCopy('wp-content');
     eleventyConfig.addPassthroughCopy('service-worker.js');
 
     return {
